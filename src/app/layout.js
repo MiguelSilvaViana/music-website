@@ -2,8 +2,7 @@ import './globals.css';
 import { Alex_Brush, Montserrat } from 'next/font/google';
 
 /* components */
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { Header, Footer } from '@/components';
 
 const alexBrush = Alex_Brush({
   weight: ['400'],

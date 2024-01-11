@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import Newsletter from '@/components/Newsletter/Newsletter';
 import Player from '@/components/Player';
 import Albums from '@/components/albums/Albums';
 import Blog from '@/components/blog/Blog';
@@ -15,7 +16,8 @@ export default function Home() {
       <Events />
       <Albums />
       <Blog />
-      <div className='h-[4000px]'></div>
+      <Newsletter />
+      {/* <div className='h-[4000px]'></div> */}
     </main>
   );
 }

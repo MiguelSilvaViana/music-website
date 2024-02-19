@@ -2,7 +2,8 @@ import SectionHeader from '../SectionHeader';
 import PostList from './PostList';
 
 const getPosts = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/posts`);
+  // const res = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/posts`);
+  const res = await fetch(`/posts`);
   return res.json();
 };
 

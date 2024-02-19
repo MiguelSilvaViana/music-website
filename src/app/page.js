@@ -7,6 +7,7 @@ import Events from '@/components/events/Events';
 import Image from 'next/image';
 
 /* json-server --watch --port 4000 ./_data/db.json */
+/* ts */
 
 export default function Home() {
   return (

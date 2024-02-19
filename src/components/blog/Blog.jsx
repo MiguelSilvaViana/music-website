@@ -2,7 +2,6 @@ import SectionHeader from '../SectionHeader';
 import PostList from './PostList';
 
 const getPosts = async () => {
-  // const res = await fetch('http://localhost:4000/posts');
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL_API}/posts`);
   return res.json();
 };

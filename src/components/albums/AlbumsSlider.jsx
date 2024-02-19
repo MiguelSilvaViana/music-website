@@ -26,17 +26,17 @@ const AlbumsSlider = () => {
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
   const { data, error } = useSWR(
-    `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/albums`,
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/albums`,
     fetcher,
   );
 
   // const { data, error } = useSWR(`/albums`, fetcher);
 
   // if (error) return `Failed to fetch data`;
-  if (error) return `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/albums`;
+  if (error) return `${process.env.NEXT_PUBLIC_BASE_URL}/api/albums`;
   if (!data) return 'Loading...';
 
-  console.log(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/albums`);
+  console.log(`${process.env.NEXT_PUBLIC_BASE_URL}/api/albums`);
   return (
     <>
       {/* top slider */}

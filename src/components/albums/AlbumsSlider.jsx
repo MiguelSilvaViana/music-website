@@ -25,12 +25,12 @@ const AlbumsSlider = () => {
 
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
-  // const { data, error } = useSWR(
-  //   `${process.env.NEXT_PUBLIC_VERCEL_URL}/albums`,
-  //   fetcher,
-  // );
+  const { data, error } = useSWR(
+    `${process.env.NEXT_PUBLIC_VERCEL_URL}/albums`,
+    fetcher,
+  );
 
-  const { data, error } = useSWR(`/albums`, fetcher);
+  // const { data, error } = useSWR(`/albums`, fetcher);
 
   if (error) return 'Failed to fetch data';
   if (!data) return 'Loading...';

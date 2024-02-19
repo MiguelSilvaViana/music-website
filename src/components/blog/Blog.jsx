@@ -2,10 +2,8 @@ import SectionHeader from '../SectionHeader';
 import PostList from './PostList';
 
 const getPosts = async () => {
-  const headers = { cookie: '<incoming request header cookies>' };
-
   // const res = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/posts`);
-  const res = await fetch('<incoming request origin>/api/posts', { headers });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`);
 
   return res.json();
 };

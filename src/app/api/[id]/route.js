@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
-import db from '../../../../_data/db.json';
+// import db from '../../../../_data/db.json';
+import db from '../../../_data/db.json';
 
 export async function GET(request, { params }) {
   const id = params.id;

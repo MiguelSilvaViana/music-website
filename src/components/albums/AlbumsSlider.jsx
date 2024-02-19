@@ -26,7 +26,7 @@ const AlbumsSlider = () => {
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
   const { data, error } = useSWR(
-    `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/albums`,
+    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/albums`,
     fetcher,
   );
 

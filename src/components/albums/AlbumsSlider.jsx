@@ -32,10 +32,10 @@ const AlbumsSlider = () => {
 
   // const { data, error } = useSWR(`/albums`, fetcher);
 
-  if (error) return 'Failed to fetch data';
+  if (error)
+    return `Failed to fetch data ${process.env.NEXT_PUBLIC_VERCEL_URL}`;
   if (!data) return 'Loading...';
 
-  console.log();
   return (
     <>
       {/* top slider */}

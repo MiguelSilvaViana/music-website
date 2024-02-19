@@ -15,7 +15,8 @@ const EventBox = ({ events }) => {
       initial='hidden'
       whileInView={'show'}
       viewport={{ once: false, amount: 0.3 }}
-      className='bg-secondary/60 rounded-[10px] p-4 xl:p-12 relative'>
+      className='bg-secondary/60 rounded-[10px] p-4 xl:p-12 relative'
+    >
       <div className='flex flex-col xl:flex-row justify-between h-[620px] xl:h-full gap-x-4'>
         {/* image */}
         <div className='hidden xl:flex w-[400px]'>
@@ -35,7 +36,8 @@ const EventBox = ({ events }) => {
             return (
               <div
                 key={event.id}
-                className='flex flex-col items-center justify-between pb-10 my-4 text-center border-b xl:flex-row gap-y-4 xl:gap-y-0 xl:text-left xl:my-0 border-white/10 xl:py-3 last-of-type:border-none first-of-type:pt-0'>
+                className='flex flex-col items-center justify-between pb-10 my-4 text-center border-b xl:flex-row gap-y-4 xl:gap-y-0 xl:text-left xl:my-0 border-white/10 xl:py-3 last-of-type:border-none first-of-type:pt-0'
+              >
                 <div className='flex flex-col items-center xl:flex-row gap-x-4'>
                   {/* day & month */}
                   <div className='flex flex-col items-center justify-center leading-tight w-[80px] mb-4 xl:mb-0'>

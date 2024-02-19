@@ -19,16 +19,22 @@ import 'swiper/css/pagination';
 // import required modules
 import { EffectCoverflow, FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
-/* fetcher */
-const fetcher = (url) => fetch(url).then((res) => res.json());
+/* fetcher  maranata*/
 const AlbumsSlider = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  const { data, error } = useSWR('http://localhost:4000/albums', fetcher);
+  const fetcher = (url) => fetch(url).then((res) => res.json());
+
+  // const { data, error } = useSWR('http://localhost:4000/albums', fetcher);
+  const { data, error } = useSWR(
+    `${process.env.NEXT_PUBLIC_BASE_URL_API}/albums`,
+    fetcher,
+  );
 
   if (error) return 'Failed to fetch data';
   if (!data) return 'Loading...';
 
+  console.log();
   return (
     <>
       {/* top slider */}

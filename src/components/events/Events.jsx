@@ -2,7 +2,8 @@ import SectionHeader from '../SectionHeader';
 import EventBox from './EventBox';
 
 const getEvents = async () => {
-  const res = await fetch(`/api/events`);
+  const headers = { cookie: '<incoming request header cookies>' };
+  const res = await fetch('<incoming request origin>/api/events', { headers });
 
   return res.json();
 };

@@ -1,5 +1,3 @@
-'use client';
-
 import SectionHeader from '../SectionHeader';
 import EventBox from './EventBox';
 

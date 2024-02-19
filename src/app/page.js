@@ -14,9 +14,9 @@ export default function Home() {
     <main>
       <Hero />
       <Player />
-      {/* <Events /> */}
+      <Events />
       <Albums />
-      {/* <Blog /> */}
+      <Blog />
       <Newsletter />
       {/* <div className='h-[4000px]'></div> */}
     </main>

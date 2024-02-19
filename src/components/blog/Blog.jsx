@@ -3,7 +3,13 @@ import PostList from './PostList';
 
 const getPosts = async () => {
   // const res = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/posts`);
-  const res = await fetch(`/posts`);
+  const headers = {
+    cookie: '<incoming request header cookies>',
+  };
+
+  const res = await fetch(`<incoming request origin>/posts`, {
+    headers,
+  });
   return res.json();
 };
 

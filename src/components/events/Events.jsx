@@ -3,7 +3,14 @@ import EventBox from './EventBox';
 
 const getEvents = async () => {
   // const res = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/events`);
-  const res = await fetch(`/events`);
+  const headers = {
+    cookie: '<incoming request header cookies>',
+  };
+
+  const res = await fetch(`<incoming request origin>/events`, {
+    headers,
+  });
+
   return res.json();
 };
 

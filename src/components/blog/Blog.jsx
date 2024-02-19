@@ -3,7 +3,7 @@ import PostList from './PostList';
 
 const getPosts = async () => {
   // const res = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/posts`);
-  const res = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/posts`);
+  const res = await fetch(`/api/posts`);
 
   return res.json();
 };
